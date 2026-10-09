@@ -1,16 +1,27 @@
 # Stop Victim Blaming — Statement Studio
 
-A responsive, browser-based design tool for the Stop Victim Blaming community.
+A responsive browser-based statement and campaign design studio for the Stop Victim Blaming community.
 
-## Features
-- Separate templates for reference statements, awareness posters, public statements, social squares, wide banners and custom statements.
-- Live editing of headline, supporting copy, footer, community header and logo URL.
-- Wine red, forest green, navy, ochre and charcoal themes.
-- A4 portrait, 1:1 square and 16:9 wide layouts.
-- Export the current design as PNG or PDF.
+## Separate design templates
+- Reference statement: burgundy framed quote layout inspired by the supplied reference.
+- Awareness poster: high-contrast solid-colour campaign poster.
+- Public statement: formal centered heading and editorial body layout.
+- Social media square: square card layout for social posts.
+- Wide banner: horizontal 16:9 campaign banner.
+- Custom editorial: alternate typography and asymmetric background.
+
+Each template has its own visual structure, not just replacement text. Users can edit headline, body, community header, footer, logo URL, theme colour, headline size, and canvas size.
+
+## Export
+PNG and PDF export use a fixed-size off-screen canvas independent of the phone preview dimensions:
+- A4 portrait: 1240 × 1754 pixels
+- Social square: 1200 × 1200 pixels
+- Wide banner: 1600 × 900 pixels
+
+The export routine waits for fonts and images and reduces text sizing when necessary to prevent content from being clipped.
 
 ## Use
-Open `index.html` in a modern browser with an internet connection. Export uses html2canvas and jsPDF from CDN-hosted libraries. The logo is loaded from the community-provided public image URL; if it fails to load, check that URL and its access permissions.
+Open `index.html` in a modern browser with an internet connection. Export depends on html2canvas and jsPDF loaded from CDN-hosted libraries. The community logo is loaded from its supplied public Google image URL; if it does not appear, check the URL's public access settings.
 
-## Notes
-This is a client-side tool and does not upload statement text to a server. Review Burmese copy carefully before publishing, especially any community announcement or public statement.
+## Editorial note
+Review all Burmese copy carefully before publishing, particularly formal community announcements. The tool runs in the browser and does not send the text to a backend service.
